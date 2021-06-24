@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body h2#verifica {
+            background-color: rgb(177, 177, 212);
+            background: width 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Informe um número</h1>
+    <input type="number" name="valor1" id="valor1">
+    <button id="teste" onclick="verifica()">Verifica</button>
+    <h2 id="verifica">Resultado obtido</h2>
+    <script>
+
+        function verifica() {
+            var valor = window.document.getElementById('valor1')
+            var valorNum = Number(valor.value)
+            var mostrar = window.document.getElementById('verifica')
+            if (valorNum % 2 !== 0) {
+                mostrar.innerText = "O número é impar"
+            }
+            else {
+                mostrar.innerText = "O número é par"
+            }
+        }
+
+    </script>
+</body>
+
+</html>
